@@ -10,7 +10,7 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - Once your repo is open in VScode add an `index.html` file and use the `!` shortcut to create your starting code.
 
-- add an `<h1>Hello World<h1>` to the body of the html and then open it in a live server to check that it works.
+- add an `<h1>Hello World</h1>` to the body of the html and then open it in a live server to check that it works.
 
 - If you are on windows please take a moment to set your default shell in VScode to `git bash` by following this walk-though, use the first green check mark response. (https://stackoverflow.com/questions/44435697/vscode-change-default-terminal). If you are on mac, please skip this step.
 
@@ -28,7 +28,7 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - move back to the main branch by using the command `git checkout branch-name` where in this case "branch-name" would be "main"
 
-- while in the "main" branch add another part to the html `<h1>I am doing it!<h1>`
+- while in the "main" branch add another part to the body of the html `<h1>I am doing it!</h1>`
 
 - after adding to your html, check the status, stage your changes, and then commit them. Don't worry about pushing them right now.
 
@@ -46,7 +46,7 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - on your first branch with the out of date code use this command in the terminal to update the branch `git pull origin main`. This command is slightly different then when we are on the "main" branch because we need to specify where we are pulling from and what branch we want. *** "git pull <from where> <what branch from there>"
 
-- on this same branch add this to the body of your html `<p>I do not exist on the main branch...yet<p>`
+- on this same branch add this to the body of your html `<p>I do not exist on the main branch...yet</p>`
 
 - after adding the code to the html, check the status, add the changes to the staging area, commit your changes, then push your branch. Since you are pushing a branch other then the main branch you will use a slightly different command. Use `git push origin branch-name` where branch-name is the name of the branch. *** "git push <to where> <which branch>"
 
