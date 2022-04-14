@@ -57,3 +57,4 @@
 - on the next page you should see another green button called "Merge pull request", click that and then follow up by clicking "Confirm Merge"
 
 - if you go back to your "<>Code" tab you should see the changes from your branch merged into main.
+
