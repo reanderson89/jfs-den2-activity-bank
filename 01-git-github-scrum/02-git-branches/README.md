@@ -1,6 +1,6 @@
 # git branching activity
 
-git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi6yp42/edit?usp=sharing&ouid=104850350077467742345&rtpof=true&sd=true
+[git cheat sheet](https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi6yp42/edit?usp=sharing&ouid=104850350077467742345&rtpof=true&sd=true)
 
 - Start by creating a new repo, you can call it `git-branch-practice`.
 
@@ -12,7 +12,7 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - add an `<h1>Hello World</h1>` to the body of the html and then open it in a live server to check that it works.
 
-- If you are on windows please take a moment to set your default shell in VScode to `git bash` by following this walk-though, use the first green check mark response. (https://stackoverflow.com/questions/44435697/vscode-change-default-terminal). If you are on mac, please skip this step.
+- If you are on windows please take a moment to set your default shell in VScode to `git bash` by following [this walk-though](https://stackoverflow.com/questions/44435697/vscode-change-default-terminal), use the first green check mark response. If you are on mac, please skip this step.
 
 - push your changes to github. Remember to check the status, add your changes to the staging area, and then commit your changes before you push. If you forget these commands use the cheat sheet that is linked above.
 
@@ -44,11 +44,11 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - after you successfully push your main branch to github move to your first branch that has out of date code.
 
-- on your first branch with the out of date code use this command in the terminal to update the branch `git pull origin main`. This command is slightly different then when we are on the "main" branch because we need to specify where we are pulling from and what branch we want. *** "git pull <from where> <what branch from there>"
+- on your first branch with the out of date code use this command in the terminal to update the branch `git pull origin main`. This command is slightly different then when we are on the "main" branch because we need to specify where we are pulling from and what branch we want. *** "git pull from-where what-branch-from-there"
 
 - on this same branch add this to the body of your html `<p>I do not exist on the main branch...yet</p>`
 
-- after adding the code to the html, check the status, add the changes to the staging area, commit your changes, then push your branch. Since you are pushing a branch other then the main branch you will use a slightly different command. Use `git push origin branch-name` where branch-name is the name of the branch. *** "git push <to where> <which branch>"
+- after adding the code to the html, check the status, add the changes to the staging area, commit your changes, then push your branch. Since you are pushing a branch other then the main branch you will use a slightly different command. Use `git push origin branch-name` where branch-name is the name of the branch. *** "git push to-where which-branch"
 
 - go to github and look for the Green "Compare and pull request" button, it will be on the "<>Code" tab.
 
