@@ -50,4 +50,10 @@ git cheat sheet: https://docs.google.com/document/d/1VJGwcFLIMXwe2YI8xgXPnuZLCxi
 
 - after adding the code to the html, check the status, add the changes to the staging area, commit your changes, then push your branch. Since you are pushing a branch other then the main branch you will use a slightly different command. Use `git push origin branch-name` where branch-name is the name of the branch. *** "git push <to where> <which branch>"
 
-- go to github and look for the "Create New Pull Request" button.
+- go to github and look for the Green "Compare and pull request" button, it will be on the "<>Code" tab.
+
+- after clicking the Green "Compare and Pull Request" button, click the next green button to "Create Pull Request"
+
+- on the next page you should see another green button called "Merge pull request", click that and then follow up by clicking "Confirm Merge"
+
+- if you go back to your "<>Code" tab you should see the changes from your branch merged into main.
