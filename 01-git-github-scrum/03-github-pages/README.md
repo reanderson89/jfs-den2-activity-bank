@@ -23,11 +23,13 @@
 
 **7. Lastly, submit the URL for your live page for attendance.**
 
+
+
 ## BONUS
 
-**Make your font style italic and/or bold on your README.md**
+**1. Make your font style italic and/or bold on your README.md**
 
-**Take a screenshot of your live page and display it on your README.md**
+**2. Take a screenshot of your live page and display it on your README.md**
 
 
 
