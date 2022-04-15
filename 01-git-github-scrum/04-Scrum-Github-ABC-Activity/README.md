@@ -1,6 +1,9 @@
 ## ABC-scrum-github-activity ##
 
 - [Here is a link to this README.md in the browser, you will be able to see the pictures there.](https://github.com/reanderson89/jfs-den2-activity-bank/tree/main/01-git-github-scrum/04-Scrum-Github-ABC-Activity)
+
+- One person will need to create a repository and then add their team members as collaborators. While in your repository on github go to "Settings > Collaborators > Add People" and then search for your teammates by name or email. They will be sent an email to join the repo, they will need to open the email and follow the link to become an active member of the repo.
+
 # Copy the necessary files and folders to your project (photos folder, index.html, README.md), then read the entire README before moving on. #
 
 - In this activity your group is tasked to create the ABC's by taking pictures of various items around you or finding them from the web and adding them to the index.html file to display them all. 
@@ -16,8 +19,6 @@
 - [Link for documentation on the `<h1> and <h3> tags`](https://www.w3schools.com/tags/tag_img.asp)
 
 ## Begin this activity by... ##
-
-- One person will need to create a repository and then add their team members as collaborators. While in your repository on github go to "Settings > Collaborators > Add People" and then search for your teammates by name or email. They will be sent an email to join the repo, they will need to open the email and follow the link to become an active member of the repo.
 
 - Add security to the main branch. Go to "Settings > Branches > Add Rule". In the Add Rule page you will need to type "main" in the "Branch Name Pattern" text box at the top. make sure your settings look like this image, and remember that it is case sensitive... "Main" does not equal "main". After you have everything selected like the image below click the green "Create" button.
 
