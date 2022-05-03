@@ -1,4 +1,6 @@
-    ## Bootstrap Layout
+ ## Bootstrap Layout
+
+ - Make sure to start by creating a new branch for this activity
 
 - Grab the "CSS" `<link>` from [bootstrap](https://getbootstrap.com/)
     - click "Get Started" to find what you need

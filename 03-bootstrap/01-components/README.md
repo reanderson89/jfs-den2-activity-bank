@@ -1,5 +1,7 @@
 ## Getting started with bootstrap and using components
 
+- Make sure to start by creating a new branch for this activity
+
 - Grab the "CSS" `<link>` from [bootstrap](https://getbootstrap.com/)
     - click "Get Started" to find what you need
     - copy the CSS link and paste it in the designated spot in the index.html
