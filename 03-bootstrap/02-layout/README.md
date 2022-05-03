@@ -17,7 +17,7 @@
 - Then, add another `<div>` inside of the container div and give it an attribute of `class="row"`
     - The bootstrap grid is made up of a container that holds rows, and rows that hold columns, and columns that hold content. Each row is a new line on our webpage and can hold 12 columns or any configuration of columns that are sized to equal 12.
 
-- Then, add 3 `<div>`'s inside of the container div and give them all an attribute of `class="col"`
+- Then, add 3 `<div>`'s inside of the row div and give them all an attribute of `class="col"`
     - When building grid layouts with bootstrap all content will go into a column. If you do not put the content into a column it may work, but it could cause un-forseen errors.
 
 - Add a <p> tag to each column that you have created and give each column some content. Ex: Column 1, Column 2,Column 3.
