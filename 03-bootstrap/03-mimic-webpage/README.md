@@ -13,3 +13,9 @@
 
 - Step 1:
 ![step-1](./assets/step-1.png)
+
+- Step 2:
+![step-2](./assets/step-2.png)
+
+- Step 3:
+![step-3](./assets/step-3.png)
