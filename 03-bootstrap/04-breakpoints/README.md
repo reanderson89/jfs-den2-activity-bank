@@ -2,6 +2,8 @@
 
 - Start by creating a new branch for this activity
 
+- Check out bootstrap documentation for more info on their [breakpoints](https://getbootstrap.com/docs/5.1/layout/breakpoints/) 
+
 - You will not need to add any html to fix the responsiveness for the page
 
 - Use bootstrap classes to get the page to display like the following images as you resize it.
