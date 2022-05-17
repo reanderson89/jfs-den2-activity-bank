@@ -3,10 +3,12 @@ let num1 = 3;
 let num2 = 9;
 
 // THIS SHOULD ADD
- let add = ;
+ let add = num1 + num2;
+ 
+ console.log(add);
 
 // THIS SHOULD SUBTRACT NUM1 FROM NUM2 
- let  = ;
+//  let  = ;
 
 // THIS SHOULD MULTIPLY NUM1 & NUM2 
 
