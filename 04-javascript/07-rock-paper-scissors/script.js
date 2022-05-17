@@ -29,6 +29,7 @@ const getComputerChoice = function(){
 const playGame = function(){
     let userChoice = getUserChoice();
     let computerChoice = getComputerChoice();
+    alert(`You chose: ${userChoice}\nComputer chose: ${computerChoice}`)
 
     if ((userChoice === "r" && computerChoice === "s") ||
             (userChoice === "s" && computerChoice === "p") || 
@@ -42,10 +43,14 @@ const playGame = function(){
             losses++;
             alert("You've lost " + losses + " time(s).");
           }
+    alert(`Current Standings:\nWins: ${wins}\nLosses: ${losses}\n Ties: ${ties}`)
 
     let playAgain = confirm("Do you want to play again?");
-    if(playAgain === true){
-        playAgain();
+    
+    let totalPlays = wins + losses + ties;
+
+    if(playAgain === true && totalPlays <= 10){
+        playGame();
     }
 }
 
