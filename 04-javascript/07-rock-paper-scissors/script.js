@@ -43,6 +43,10 @@ const playGame = function(){
             alert("You've lost " + losses + " time(s).");
           }
 
+    let playAgain = confirm("Do you want to play again?");
+    if(playAgain === true){
+        playAgain();
+    }
 }
 
 playGame();
