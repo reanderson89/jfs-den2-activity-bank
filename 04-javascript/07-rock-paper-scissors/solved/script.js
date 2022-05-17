@@ -43,13 +43,15 @@ const playGame = function(){
             losses++;
             alert("You've lost " + losses + " time(s).");
           }
+
+        //   4th hint
     alert(`Current Standings:\nWins: ${wins}\nLosses: ${losses}\n Ties: ${ties}`)
 
     let playAgain = confirm("Do you want to play again?");
     
     let totalPlays = wins + losses + ties;
 
-    if(playAgain === true && totalPlays <= 10){
+    if(playAgain === true && totalPlays < 10){
         playGame();
     }
 }
