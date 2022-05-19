@@ -15,12 +15,12 @@
 
 // When you are done with your function uncomment the function calls below to test your code
 
-// these should fail and print "Invalid Number"
+// these should print "Invalid Number"
     // console.log(addNumbers(5));
     // console.log(addNumbers(1200));
 
 
-// These should pass and print the value of the numbers added together
+// These should print the value of the numbers added together
     // console.log(addNumbers(917));
     // console.log(addNumbers(503));
     // console.log(addNumbers(404));
