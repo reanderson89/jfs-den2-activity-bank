@@ -8,9 +8,9 @@
 
 ## Requirements
 
-* You must use a .filter() and/or a .map(). You can start by using a for loop if you would like, but then see if you can refactor it after you can make it work.
+* You will need to use some sort of loop or iterator method. You can start by using a for loop if you would like, but then see if you can refactor it after using the `.map()` method.
 
-* You must pass 2 arrays to the `renderPar()` function to get your items to display and complete the challenge. There should be no missing information from the arrays. The new array that has a total par of 99 will hold the same information as the original except that the `par` for each hole will change depending on the difficulty. The `hole number` and `difficulty` value will remain the same though.
+* You must pass 2 arguments to the `renderPar()` function to get your items to display and complete the challenge. There should be no missing information from the arrays. The new array that has a total par of 99 will hold the same information as the original except that the `par` for each hole will change depending on the difficulty. The `hole number` and `difficulty` value will remain the same though.
 
 * To adjust the `par` for each hole you will need to **add 2** to every hole with a `difficulty` rating between and including 1-9, and **add 1** to every hole with a `difficulty` rating between and including 10-18.
 

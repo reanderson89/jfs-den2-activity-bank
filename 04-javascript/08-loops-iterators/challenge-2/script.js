@@ -3,7 +3,7 @@ let under100 = document.getElementById("new");
 let oldTotal = document.getElementById("oldTotal");
 let newTotal = document.getElementById("newTotal");
 
-// [ holeNumber, par, difficulty ]
+// Here is an example of hole number 1 and it's information [ holeNumber 1, par 4, difficulty 11 ] 
 let lostTracks = [[1,4,11],[2,4,13],[3,4,9],[4,4,3],[5,3,15],[6,4,7],[7,5,5],[8,3,17],[9,5,1],[10,4,4],[11,3,18],[12,5,2],[13,4,12],[14,4,10],[15,4,14],[16,3,16],[17,4,8],[18,5,6]]
 
 // accepts two arrays as parameters and renders them to the page. You do not need to change anything here (You can add code for the bonus though), but you will call the function and pass in the arguments to complete the challenge.
@@ -31,6 +31,9 @@ under100.innerHTML = displayNew;
 // newTotal.innerHTML = `The new par for this course is `;
 
 }
+
+
+// Write your code here
 
 
 
