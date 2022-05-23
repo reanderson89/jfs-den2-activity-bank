@@ -36,14 +36,34 @@ displayNewTotal.innerHTML = `The new par for this course is ${totalNewPar}`;
 
 }
 
-const generateNewPar = golfCourse => {
-    let par99 = golfCourse.map(hole => {
-        if(hole[2] <= 9){
-            return [hole[0], hole[1] + 2, hole[2]];
-        } else {
-            return [hole[0], hole[1] + 1, hole[2]];
-        }
-    });
+const generateNewPar = oldPar => {
+
+    // let par99 = [];
+    // for (let i = 0; i < oldPar.length; i++){
+    //     if(oldPar[i][2] <= 9 && oldPar[i][2] >= 1){
+    //         let holeInfo = [oldPar[i][0], oldPar[i][1] + 2, oldPar[i][2]]
+    //         par99.push(holeInfo);
+    //     } else if(oldPar[i][2] >= 10 && oldPar[i][2] <=18){
+    //         let holeInfo = [oldPar[i][0], oldPar[i][1] + 1, oldPar[i][2]]
+    //         par99.push(holeInfo);
+
+    //     }
+    // }
+
+
+
+     let par99 = oldPar.map(currentHoleArr => {
+        if (currentHoleArr[2] >= 1 && currentHoleArr[2] <=9){
+                let adjustedHole = [currentHoleArr[0], currentHoleArr[1] + 2, currentHoleArr[2]];
+                return adjustedHole;
+            } else if (currentHoleArr[2] >= 10 && currentHoleArr[2] <= 18){
+                let adjustedHole = [currentHoleArr[0], currentHoleArr[1] + 1, currentHoleArr[2]];
+                return adjustedHole;
+            }
+    })
+
+
+    // let par99 = oldPar.map(hole => (hole[2] >= 1 && hole[2] <= 9) ? [hole[0], hole[1] + 2, hole[2]] : [hole[0], hole[1] + 1, hole[2]]);
 
     return par99;
 }
