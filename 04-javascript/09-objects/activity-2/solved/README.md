@@ -10,4 +10,4 @@ You have been given starter code.
 5. Do step 4 two(2) more times.
 6. In the console, display the denverBootCamp object again.
 7. Delete one of your classmates and display in the console. 
-8. In the console, display the third classmate in your list favorite movie quote. 
+8. In the console, display the second classmate in your list favorite movie quote. 
