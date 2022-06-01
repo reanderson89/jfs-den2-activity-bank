@@ -15,10 +15,11 @@
 
 
 const totalBasketballScore = function(freeThrows, midRange, threePointers){
-if(typeof freeThrows !== "number" || typeof midRange !== "number" || typeof threePointers !== "number"){
-    return "All entries must be numbers";
-}
-return freeThrows + midRange * 2 + threePointers * 3;
+if(typeof(freeThrows || midRange || threePointers) !== 'number'){
+    return "Not a number"
+} 
+    return freeThrows + midRange * 2 + threePointers * 3;
+
 }
 
 
