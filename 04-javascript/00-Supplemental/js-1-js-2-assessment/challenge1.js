@@ -14,13 +14,43 @@
 // For Example:
 
 
+// const totalBasketballScore = function(freeThrows, midRange, threePointers){
+// if(typeof(freeThrows || midRange || threePointers) !== 'number'){
+//     return "Not a number";
+// } 
+//     return freeThrows + midRange * 2 + threePointers * 3;
+// }
+
+// beginning of Lokriti's explanation of why the above code does not give the expected result
+//console.log('m' && 3 && 3);
+//ouput 3
+//and the typeof (3) is number
+//console.log(3 && 3 && 3);
+//ouput 3
+//and the typeof (3) is number
+
+
+//console.log('m' || 3 || 3);
+//ouput m
+//and the typeof (m) is string
+//console.log(3 || 'm' || 3);
+//ouput 3
+//and the typeof (3) is number
+
+// so the return of  typeof (a && b && c) is not what we expected 
+
+//so the return of  typeof (a || b || c) is not what we expected 
+
+// end of Lokriti's explanation
+
+
 const totalBasketballScore = function(freeThrows, midRange, threePointers){
-if(typeof(freeThrows || midRange || threePointers) !== 'number'){
-    return "Not a number"
+if(typeof freeThrows !== "number" || typeof midRange !== "number" || typeof threePointers !== "number"){
+    return "Not a number";
 } 
     return freeThrows + midRange * 2 + threePointers * 3;
-
 }
+
 
 
 let score = totalBasketballScore("2",3,4)  //should return a score of 20.
