@@ -1,4 +1,3 @@
-// Refactor the following function to use async...await instead
 const studentAsleep = false;
 const studentLearning = true;
 
