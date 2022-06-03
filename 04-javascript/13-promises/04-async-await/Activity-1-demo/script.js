@@ -25,11 +25,19 @@ const success = (message) => {
 }
 
 
-watchInstructorDemo()
-.then(success)
-.catch((error) => {
-    console.log(error);
-})
+// watchInstructorDemo()
+// .then(success)
+// .catch((error) => {
+//     console.log(error);
+// })
 
+async function demo() {
+  try{
+    const response = await watchInstructorDemo();
+    console.log(response);
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-
+demo();
