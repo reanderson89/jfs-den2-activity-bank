@@ -29,7 +29,7 @@ function processRequest(response) {
 
 async function doWork() {
     try {
-        const response = await makeRequest('Google');
+        const response = await makeRequest('Facebook');
         console.log('Response Received');
         const processedResponse = await processRequest(response);
         console.log(processedResponse);
