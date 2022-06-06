@@ -5,8 +5,8 @@ const postUsers = () => {
             'Content-Type': 'application/json'
           },
         body: JSON.stringify({
-            name: "Ted",
-            job: "Coach"
+            name: "Susan",
+            job: "Teacher"
         })
     })
 }
