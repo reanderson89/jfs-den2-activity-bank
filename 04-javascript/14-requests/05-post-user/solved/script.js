@@ -5,6 +5,7 @@ let empName = document.getElementById("name")
 let empJob = document.getElementById("job")
 // place to display message for response
 let displayMessage = document.getElementById("message")
+let myForm = document.forms["myForm"];
 
 const postUsers = (emp) => {
     return fetch("https://reqres.in/api/users", {
@@ -17,10 +18,15 @@ const postUsers = (emp) => {
 }
 
 
-const addEmp = async () => {
-    let empObj = {name: empName.value, job: empJob.value}
-    console.log(empObj);
-    let response = await postUsers(empObj);
+const addEmp = async (e) => {
+    e.preventDefault();
+    console.log(myForm[0].value);
+    // the below code will generate an object with key/value pairs based off of the id's used in the html and then pass the object to the postUsers() function
+    let formObj = {};
+    for (let i = 0; i <myForm.length -1; i++){
+         formObj[myForm[i].id] = myForm[i].value; 
+    }
+    let response = await postUsers(formObj);
     if(response.ok){
         let data = await response.json();
         console.log(data);
