@@ -11,17 +11,17 @@ describe("The following functions are being tested from the calc.js file", () =>
       const result = sum(1, 2);
       expect(result).toBe(3);
     });
-    test("1 + 2 to equal 3", () => {
-      const result = sum(1, 2);
-      expect(result).toBe(3);
+    test("2 + 2 to equal 4", () => {
+      const result = sum(2, 2);
+      expect(result).toBe(4);
     });
-    test("1 + 2 to equal 3", () => {
-      const result = sum(1, 2);
-      expect(result).toBe(3);
+    test("3 + 2 to equal 5", () => {
+      const result = sum(3, 2);
+      expect(result).toBe(5);
     });
-    test("1 + 2 to equal 3", () => {
-      const result = sum(1, 2);
-      expect(result).toBe(3);
+    test("4 + 2 to equal 6", () => {
+      const result = sum(4, 2);
+      expect(result).toBe(6);
     });
   })
 

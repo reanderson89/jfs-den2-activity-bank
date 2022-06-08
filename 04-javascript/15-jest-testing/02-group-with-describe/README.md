@@ -15,4 +15,4 @@ describe("This will describe the group of tests that will run", () => {
 })
 ```
 
-* Refactor the code given in the calc.test.js file so that the tests are grouped together inside of a describe. Run the tests to make sure they still work. Change their names so that it makes sense when you read them in the terminal.
+* Refactor the code given in the calc2.test.js file so that the tests are grouped together inside of a describe. Run the tests to make sure they still work. Change their names so that it makes sense when you read them in the terminal.
