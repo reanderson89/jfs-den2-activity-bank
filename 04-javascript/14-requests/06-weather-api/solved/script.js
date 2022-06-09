@@ -18,9 +18,7 @@ const cityStorage = {
     },
     getCurrentCity(){
         this.currentCity = localStorage.getItem("current-city")
-        // if(this.currentCity){
-        //     displayWeather(this.currentCity);
-        // }
+        displayWeather();
         return this.currentCity;
     },
     getCityArr(){
@@ -30,22 +28,28 @@ const cityStorage = {
 
 }
 
-cityStorage.getCurrentCity();
-cityStorage.getCityArr();
+
 
 
 const getWeather = (city) => {
     return fetch(`https://api.weatherapi.com/v1/current.json?key=46e1df487c204aaea80231816211312&q=${city}`)
 }
 
-const displayWeather = async (e) => {
-    e.preventDefault()
-    cityStorage.setCurrentCity(userCity.value);
-    cityStorage.setCityArr(userCity.value);
-    const response = await getWeather(cityStorage.currentCity);
+const displayWeather = async () => {
+
+    let currentCity = "";
+    if(userCity.value){
+        cityStorage.setCurrentCity(userCity.value);
+        cityStorage.setCityArr(userCity.value);
+        currentCity = cityStorage.currentCity;
+    } else {
+        currentCity = localStorage.getItem("current-city")
+    }
+    const response = await getWeather(currentCity);
     const data = await response.json();
     let weather = data.current;
     currentWeather.innerHTML = `
+    <h2>${currentCity}</h2>
     <h3>${weather.condition.text}</h3>
     <img src="https:${weather.condition.icon}" alt="${weather.condition.text}">
     <h3>Humidity: ${weather.humidity}</h3>
@@ -57,6 +61,8 @@ const displayWeather = async (e) => {
 }
 
 
+cityStorage.getCurrentCity();
+cityStorage.getCityArr();
 
 ['click','submit'].forEach( evt => 
     submitBtn.addEventListener(evt, displayWeather)
