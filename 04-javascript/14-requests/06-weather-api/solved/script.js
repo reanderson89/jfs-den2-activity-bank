@@ -5,13 +5,14 @@ const cityBtns = document.getElementById("bonus-buttons");
 
 const cityStorage = {
     currentCity: "",
-    cityBtnArr: [],
+    cityBtnArr: ["none", "in here"],
     setCurrentCity(city){
         this.currentCity = city;
         localStorage.setItem("current-city", this.currentCity)
         
     },
     setCityArr(city){
+        console.log(this.cityBtnArr);
         this.cityBtnArr.push(city);
         localStorage.setItem("cities", JSON.stringify(this.cityBtnArr))
     },
@@ -20,7 +21,9 @@ const cityStorage = {
         return this.currentCity;
     },
     getCityArr(){
-        this.cityBtnArr = JSON.parse(localStorage.getItem("cities"));
+        if(localStorage.getItem("cities")){
+            this.cityBtnArr = JSON.parse(localStorage.getItem("cities"));
+        }
         return this.cityBtnArr;
     }
 
@@ -62,9 +65,9 @@ const pageLoad = () => {
     }
 }
 
-['click','submit'].forEach( evt => 
-    submitBtn.addEventListener(evt, displayWeather)
-);
+
+submitBtn.addEventListener("click", displayWeather)
+
 
 pageLoad();
 
