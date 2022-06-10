@@ -2,12 +2,8 @@
 const gearManager = new GearController();
 
 
-let gearRows = document.getElementById("gearRows");
+let gearRowsTable = document.getElementById("gearRows");
 let addGearBtn = document.getElementById("addGearButton");
-
-if(localStorage.getItem("gear")){
-  gearManager.loadLocalStorage();
-}
 
 
 
@@ -15,24 +11,26 @@ const renderListFromLocal = () => {
     // we want to loop through our array and display each item by adding it to our last
     gearManager.loadLocalStorage();
     let gear = gearManager.gearArray;
-    console.log(gear);
 
     for (let i = 0; i < gear.length; i++){
   
-      console.log(gear[i]);
       // row aren't displaying on the page. Clear local storage and give it a real image.
         let newRow = document.createElement("tr");
         newRow.setAttribute("data-id", gear[i].id);
         newRow.innerHTML = `
-        <th scope="row">${gear[i].url}</th>
+        <th scope="row"><img class="img-thumbnail" src="${gear[i].url}"></th>
         <td>${gear[i].type}</td>
         <td>${gear[i].category}</td>
         <td>${gear[i].price}</td>`;
-      gearRows.appendChild(newRow); 
+        gearRowsTable.append(newRow); 
+      
     }
 }
 
-
+if(localStorage.getItem("gear")){
+  gearManager.loadLocalStorage();
+  renderListFromLocal()
+}
 
 
 addGearBtn.addEventListener("click", function(event){
@@ -45,9 +43,9 @@ addGearBtn.addEventListener("click", function(event){
     
     gearManager.addGear(gearURL.value, gearCategory.value, gearType.value, gearPrice.value);
     gearManager.setLocalStorage();
+    gearRows.innerHTML = '';
     renderListFromLocal();
 
-    gearRows.innerHTML = '';
 
     gearPrice.value = "";
     gearCategory.value = "";
