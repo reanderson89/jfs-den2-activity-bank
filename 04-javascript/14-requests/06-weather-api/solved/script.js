@@ -12,10 +12,10 @@ const cityStorage = {
   },
   setCityArr(incomingCity) {
     for (let i = 0; i < this.cityArr.length; i++) {
-        const cityInArray = this.cityArr[i];
-        if (incomingCity.toLowerCase() === cityInArray.toLowerCase()){
-            return;
-        } 
+      const cityInArray = this.cityArr[i];
+      if (incomingCity.toLowerCase() === cityInArray.toLowerCase()) {
+        return;
+      }
     }
     this.cityArr.push(incomingCity);
     console.log(this.cityArr);
@@ -39,20 +39,14 @@ const getWeather = (city) => {
   );
 };
 
-const displayWeather = async () => {
-  let currentCity = "";
-  if (userCity.value) {
-    cityStorage.setCurrentCity(userCity.value);
-    cityStorage.setCityArr(userCity.value);
-    currentCity = cityStorage.currentCity;
-  } else {
-    currentCity = localStorage.getItem("current-city");
-  }
-  const response = await getWeather(currentCity);
+const displayWeather = async (city) => {
+  cityStorage.setCurrentCity(city);
+  cityStorage.setCityArr(city);
+  const response = await getWeather(city);
   const data = await response.json();
   let weather = data.current;
   currentWeather.innerHTML = `
-    <h2>${currentCity}</h2>
+    <h2>${city}</h2>
     <h3>${weather.condition.text}</h3>
     <img src="https:${weather.condition.icon}" alt="${weather.condition.text}">
     <h3>Humidity: ${weather.humidity}</h3>
@@ -60,46 +54,52 @@ const displayWeather = async () => {
     <h3>Feels Like: ${weather.feelslike_f}</h3>
     <h3>Wind: ${weather.wind_mph}</h3>
     `;
-    
 };
 
 const setClickedCity = (event) => {
-let city = event.target.innerHTML;
-cityStorage.setCurrentCity(city);
-displayWeather();
-}
+  let city = event.target.innerHTML;
+  cityStorage.setCurrentCity(city);
+  displayWeather(city);
+};
 
 const displayCityButtons = () => {
-    cityBtns.innerHTML = "";
-    cityStorage.cityArr.forEach(city => {
-        cityBtns.innerHTML += `<button type="button" onclick="setClickedCity(event)" id="submitBtn">${city}</button>`
-    })
-}
+  cityBtns.innerHTML = "";
+  cityStorage.cityArr.forEach((city) => {
+    cityBtns.innerHTML += `<button type="button" onclick="setClickedCity(event)" id="submitBtn">${city}</button>`;
+  });
+};
 
 const pageLoad = () => {
   const currentCity = cityStorage.getCurrentCity();
   cityStorage.getCityArr();
   if (currentCity) {
-    displayWeather();
+    displayWeather(currentCity);
     displayCityButtons();
   }
 };
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  displayWeather();
+  let currentCity = userCity.value.trim();
+  if (currentCity === ""){
+    return;
+  }
+  displayWeather(currentCity);
   displayCityButtons();
   userCity.value = "";
 });
+
 userCity.addEventListener("onkeydown", function (e) {
   e.preventDefault();
+  let currentCity = userCity.value.trim();
+  if (currentCity === ""){
+    return;
+  }
   if (e.keyCode == 13) {
-    displayWeather();
+    displayWeather(currentCity);
     displayCityButtons();
     userCity.value = "";
   }
 });
 
 pageLoad();
-
-
