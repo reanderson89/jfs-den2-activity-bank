@@ -1,0 +1,19 @@
+html {
+    position:relative;
+    background-image: url("../images/bachelorInBack.jpg");
+    background-size: cover;
+}
+
+.maintxt {
+    position: absolute;
+    color: whitesmoke;
+}
+
+.img-thumbnail{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
