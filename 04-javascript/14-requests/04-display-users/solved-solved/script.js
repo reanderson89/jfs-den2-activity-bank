@@ -1,5 +1,5 @@
 const makeRequest = async () => {
-    let response = await fetch("https://reqres.in/api/users");
+    let response = await fetch("http://localhost:8080/api/player");
     // if the response is bad
     if(!response.ok){
         throw new Error(`There is an error with status ${response.status}`)
@@ -35,4 +35,4 @@ const renderCards = async () => {
 
 }
 
-renderCards();
+makeRequest().then(players => console.log(`Please welcome ${players[0].name} to the team! He has ${players[0].yearsOfExperience} years of experience!`));
