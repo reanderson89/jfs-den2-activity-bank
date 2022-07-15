@@ -26,3 +26,4 @@ makeRequest('Google').then(response => {
 }).catch (err => {
     console.log(err);
 })
+
